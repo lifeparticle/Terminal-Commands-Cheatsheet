@@ -55,6 +55,17 @@ echo "${hw,,}"
 # hello, world!
 ```
 
+```shell
+majorVersion=$(echo "1.2.3" | cut -d "." -f 1)
+minorVersion=$(echo "1.2.3" | cut -d "." -f 2)
+buildNumber=$(echo "1.2.3" | cut -d "." -f 3)
+
+echo "${majorVersion} ${minorVersion} ${buildNumber}"
+buildNumber=$(echo "$(($buildNumber + 1))")
+echo "${majorVersion} ${minorVersion} ${buildNumber}"
+newPackageVersion=$majorVersion.$minorVersion.$buildNumber
+```
+
 ## Zsh
 ```shell
 hw='hello, world!'
