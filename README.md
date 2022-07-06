@@ -1,4 +1,26 @@
+# 
+
+```shell
+# List all available shells in macOS X
+cat /etc/shells
+
+# To see which shell you’re running.
+echo $0
+
+echo $BASH_VERSION
+
+echo $ZSH_VERSION
+
+# To change to bash shell.
+chsh -s /bin/bash
+
+# To change to zsh shell.
+chsh -s /bin/zsh
+```
+
 # Variables
+
+## Bash
 
 ```shell
 hw='Hello, World!'
@@ -11,6 +33,8 @@ echo "$first_line"
 
 # String
 
+## Bash
+
 ```shell
 num='01234567'
 echo "${num:0:3}"
@@ -20,27 +44,28 @@ echo "${num:0:3}"
 ```shell
 hw='hello, world!'
 echo "${hw^}"
-# 012
+# Hello, world!
 echo "${hw^^}"
-# 012
+# HELLO, WORLD!
 
 hw='Hello, World!'
-echo "${hw^}"
-# 012
-echo "${hw^^}"
-# 012
-```
-
-```shell
-# Zsh
-hw='hello, world!'
-echo "${(U)hw}"
-
-hw='Hello, World!'
-echo "${(L)hw}"
+echo "${hw,}"
+# hello, World!
+echo "${hw,,}"
 # hello, world!
 ```
 
+## Zsh
+```shell
+hw='hello, world!'
+echo "${(U)hw}"
+echo "${hw:u}"
+
+hw='Hello, World!'
+echo "${(L)hw}"
+echo "${hw:l}"
+# hello, world!
+```
 
 
 # Read
