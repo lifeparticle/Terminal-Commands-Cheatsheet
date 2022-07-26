@@ -86,6 +86,13 @@ read name
 echo "Hello, $name"  
 ```
 
+# Last 100 commands
+
+## Zsh
+
+```shell
+history -1 -100
+```
 
 # Resources
 1. [17 Terminal Commands Every Programmer Should Know](https://medium.com/towards-data-science/17-terminal-commands-every-programmer-should-know-4fc4f4a5e20e)
